@@ -1,9 +1,11 @@
 import background from "../../assets/background-logo.svg";
 
+import { HeaderContainer } from "./styles";
+
 export function Header() {
   return (
-    <div>
+    <HeaderContainer>
       <img src={background} />
-    </div>
+    </HeaderContainer>
   );
 }
