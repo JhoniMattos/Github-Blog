@@ -1,4 +1,4 @@
-export const DefaultTheme = {
+export const defaultTheme = {
   "white-100": "#E7EDF4" /* title */,
 
   "gray-100": "#C4D4E3" /* subtitle */,
@@ -14,4 +14,4 @@ export const DefaultTheme = {
   "gray-900": "#040F1A" /* input */,
 
   blue: "#3294F8",
-};
+} as const;
