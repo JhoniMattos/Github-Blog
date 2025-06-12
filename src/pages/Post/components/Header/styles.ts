@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProfileContainer = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
   width: 100%;
   max-width: 54rem;
@@ -9,20 +9,14 @@ export const ProfileContainer = styled.div`
 
   background-color: ${(props) => props.theme["gray-700"]};
 
-  padding: 2rem 2.5rem;
-  margin-top: -7rem;
-  gap: 2rem;
+  padding: 2rem;
+  margin-top: -5rem;
 
   position: relative;
   z-index: 1;
-
-  img {
-    width: 9.25rem;
-    border-radius: 8px;
-  }
 `;
 
-export const ProfileContent = styled.div`
+export const HeaderContent = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -33,12 +27,34 @@ export const ProfileContent = styled.div`
     align-items: center;
     width: 100%;
 
+    button {
+      all: unset;
+
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      cursor: pointer;
+
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: ${(props) => props.theme["blue"]};
+
+      transition: opacity 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.5;
+    }
+
     a {
       display: flex;
       color: ${(props) => props.theme["blue"]};
 
       font-size: 0.75rem;
       text-decoration: none;
+      text-transform: uppercase;
       font-weight: bold;
       align-items: center;
       gap: 0.5rem;
@@ -48,16 +64,17 @@ export const ProfileContent = styled.div`
 
     a:hover {
       border-bottom: 2px solid ${(props) => props.theme["blue"]};
+
       transition: border-bottom 0.3s;
     }
   }
 
   h1 {
     font-size: 1.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1.25rem;
   }
 
-  p {
+  span {
     margin-top: 0.5rem;
     color: ${(props) => props.theme["gray-300"]};
   }

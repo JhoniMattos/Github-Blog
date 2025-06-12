@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
     :focus {
       outline: 0;
-      box-shadow: 0 0 0 2px ${(props) => props.theme["gray-500"]};
+      box-shadow: 0 0 0 1px 
     }
   
   body {
@@ -23,5 +23,9 @@ export const GlobalStyle = createGlobalStyle`
   body, input, text-area, button {
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
+  }
+
+  a {
+    text-decoration: none;
   }
   `;

@@ -1,5 +1,10 @@
-import { ArrowSquareOut, GithubLogo, Users } from "phosphor-react";
 import { ProfileContainer, ProfileContent } from "./styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faUserGroup,
+} from "@fortawesome/free-solid-svg-icons";
 
 export function Header() {
   return (
@@ -13,7 +18,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            GITHUB <ArrowSquareOut size={18} />
+            GITHUB <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         </div>
 
@@ -21,11 +26,11 @@ export function Header() {
 
         <footer>
           <span>
-            <GithubLogo size={18} />
+            <FontAwesomeIcon icon={faGithub} />
             jhonimattos
           </span>
           <span>
-            <Users size={18} />
+            <FontAwesomeIcon icon={faUserGroup} />
             32 seguidores
           </span>
         </footer>
