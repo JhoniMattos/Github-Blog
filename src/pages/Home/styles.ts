@@ -42,8 +42,8 @@ export const HomeContainer = styled.div`
     color: ${(props) => props.theme["gray-300"]};
   }
 
-  :focus {
-    box-shadow: ${(props) => props.theme.blue};
+  a {
+    all: unset;
   }
 `;
 
@@ -102,5 +102,9 @@ export const PostContent = styled.div`
 
   &:hover {
     border: 2px solid ${(props) => props.theme["gray-400"]};
+  }
+
+  &:focus {
+    box-shadow: ${(props) => props.theme["gray-400"]};
   }
 `;
