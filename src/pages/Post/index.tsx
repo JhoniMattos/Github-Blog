@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+
 import { Header } from "./components/Header";
 import { PostContainer, PostContent } from "./styles";
 
@@ -57,7 +59,9 @@ export function Post() {
         comments={issue.comments}
         issueUrl={issue.html_url}
       />
-      <PostContent style={{ whiteSpace: "pre-wrap" }}>{issue.body}</PostContent>
+      <PostContent>
+        <ReactMarkdown>{issue.body}</ReactMarkdown>
+      </PostContent>
     </PostContainer>
   );
 }

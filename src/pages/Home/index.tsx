@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import ReactMarkdown from "react-markdown";
 
 interface GitHubIssue {
   id: number;
@@ -90,7 +91,7 @@ export function Home() {
                   })}
                 </span>
               </div>
-              <p>{issue.body.slice(0, 180)}...</p>
+              <ReactMarkdown>{issue.body.slice(0, 180) + "..."}</ReactMarkdown>
             </PostContent>
           </NavLink>
         ))}
